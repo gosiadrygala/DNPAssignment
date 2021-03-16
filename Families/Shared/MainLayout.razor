@@ -1,17 +1,23 @@
-﻿@inherits LayoutComponentBase
+﻿@using LoginComponent
+@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu/>
-    </div>
-
     <div class="main">
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
+        <AuthorizeView>
+            <Authorized>
+                <div class="top-row px-4">
+                    <a href="" class="oi oi-home" target="_blank"> Home page</a>
+                    <Logout/>
+                </div>
+                
+                <div class="content px-4">
+                    @Body
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <Login/>
+            </NotAuthorized>
+        </AuthorizeView>
+        
     </div>
 </div>

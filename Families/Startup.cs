@@ -4,12 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Families.Data;
+using WebFamilies_Assignment.Authentication;
+using WebFamilies_Assignment.Data;
+using WebFamilies_Assignment.Data.Implementation;
+
 
 namespace Families
 {
@@ -28,7 +32,17 @@ namespace Families
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
+            services.AddScoped<InterfaceUserService, ImplementationUserService>();
+            services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MustBeAdministrator", a =>
+                    a.RequireAuthenticatedUser().RequireClaim("Role","Administrator"));
+                options.AddPolicy("SecurityLevel3", a =>
+                    a.RequireAuthenticatedUser().RequireClaim("SecurityLevel","3", "4", "5"));
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

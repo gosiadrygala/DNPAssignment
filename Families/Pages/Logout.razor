@@ -1,0 +1,28 @@
+﻿@namespace LoginComponent
+
+@using Microsoft.AspNetCore.Components.Authorization
+@using WebFamilies_Assignment.Authentication
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+
+<AuthorizeView>
+    <Authorized>
+        <a href="" @onclick="PerformLogout">
+            Log out 
+        </a>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string username;
+    private string password;
+    
+    public async Task PerformLogout()
+    {
+        ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();     
+        username = "";
+        password = "";
+    }
+
+
+
+}

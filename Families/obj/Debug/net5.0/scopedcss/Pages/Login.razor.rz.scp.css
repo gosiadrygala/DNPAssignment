@@ -1,0 +1,14 @@
+.container[b-jvg13b0ihw]{
+    height: 100vh;
+    width: 200vw; !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-between;
+    background-size:cover ;
+    background-image: url("../../Images/loginbg1.png");
+    flexShrink: 0
+}
+
