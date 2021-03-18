@@ -1,6 +1,6 @@
 ﻿using Models;
 
-namespace WebFamilies_Assignment.Data
+namespace Families
 {
     public interface InterfaceUserService
     {

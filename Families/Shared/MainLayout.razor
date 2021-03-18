@@ -2,22 +2,22 @@
 @inherits LayoutComponentBase
 
 <div class="page">
-    <div class="main">
-        <AuthorizeView>
-            <Authorized>
+    <AuthorizeView>
+        <NotAuthorized>
+            <Login/>
+        </NotAuthorized>
+        <Authorized>
+            <div class="main">
                 <div class="top-row px-4">
-                    <a href="" class="oi oi-home" target="_blank"> Home page</a>
+                    <a href="" > Home page </a>
+                    <a href="/adults" > Adults </a>
                     <Logout/>
                 </div>
-                
                 <div class="content px-4">
                     @Body
                 </div>
-            </Authorized>
-            <NotAuthorized>
-                <Login/>
-            </NotAuthorized>
-        </AuthorizeView>
-        
-    </div>
+                <div></div>
+            </div>
+        </Authorized>
+    </AuthorizeView>
 </div>

@@ -1,7 +1,14 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?"/>
+<AuthorizeView>
+    <Authorized>
+        <div class="mainpage-container">
+            <h2> Hello @context.User.Identity.Name, welcome to Families page!<br/>
+            where you can find the latest data regarding adults, children, their pets and much more!<br/>
+            Simply choose the option from the header and search through!</h2>
+            <div class="svgimg">
+                <img src="Images/mainpage.svg" alt="Family">
+            </div>
+        </div>
+    </Authorized>
+</AuthorizeView>

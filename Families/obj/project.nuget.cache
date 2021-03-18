@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "D/pCyH4kjXcJAd3pXFrffUBl7b7YeSqenyju2gR1prFZSdG6mqysSCgITZ78J/KFldKsD9brUsku/1yPu/dbXg==",
+  "dgSpecHash": "crPxMmiFtRdY5BZbw7oXYLOwTsyeEwpXPAyo4fKZlzaCYRvFDhoNFK8HQhqnOPBmS7GwgyWQkP1PgMuR7REk1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\Families.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gosia\\.nuget\\packages\\blazored.modal\\6.0.1\\blazored.modal.6.0.1.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.6\\microsoft.aspnetcore.components.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.6\\microsoft.aspnetcore.components.analyzers.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.1.6\\microsoft.aspnetcore.components.forms.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.1.6\\microsoft.aspnetcore.components.web.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.6\\microsoft.aspnetcore.metadata.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.6\\microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.6\\microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.6\\microsoft.extensions.logging.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.extensions.options\\3.1.6\\microsoft.extensions.options.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.jsinterop\\3.1.6\\microsoft.jsinterop.3.1.6.nupkg.sha512",
+    "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.jsinterop.webassembly\\3.2.1\\microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

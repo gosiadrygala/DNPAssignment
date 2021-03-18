@@ -1,0 +1,49 @@
+.adultspage[b-0g5o9kjpes]{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+    font-family: 'Adamina', serif;
+    font-weight: 1;
+}
+
+.svgimg[b-0g5o9kjpes]{
+    position: sticky;
+}
+
+
+table[b-0g5o9kjpes] {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th[b-0g5o9kjpes],
+td[b-0g5o9kjpes] {
+    padding: 15px;
+    background-color: rgba(193, 223, 241, 0.5);
+    color: #000000;
+}
+
+th[b-0g5o9kjpes] {
+    text-align: left;
+}
+
+
+th[b-0g5o9kjpes] {
+    background-color: #8fd3f1;
+}
+
+
+
+tr:hover[b-0g5o9kjpes] {
+     background-color: rgba(255, 255, 255, 0.3);
+ }
+
+.adult-table[b-0g5o9kjpes]{
+    border: 1px solid #9bdcf1;
+
+}

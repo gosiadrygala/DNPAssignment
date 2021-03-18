@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Families.Shared
+namespace Families.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,14 @@ using Families.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\PopupBox.razor"
+using Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class PopupBox : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,16 +97,24 @@ using Families.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\Gosia\RiderProjects\Families\Families\Shared\SurveyPrompt.razor"
+#line 16 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\PopupBox.razor"
        
-    // Demonstrates how a parent component can supply parameters
     [Parameter]
-    public string Title { get; set; }
+    public int id { get; set; }
+    bool ShowComponent { get; set; } = false;
+    private IList<Adult> adults;
+    private Adult adult;
 
+    protected override async Task OnInitializedAsync()
+    {
+        adults = AdultsData.GetAllAdults();
+        adult = adults.First(a => a.Id == id);
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private InterfaceAdultsData AdultsData { get; set; }
     }
 }
 #pragma warning restore 1591

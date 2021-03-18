@@ -1,0 +1,49 @@
+﻿.adultspage{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+    font-family: 'Adamina', serif;
+    font-weight: 1;
+}
+
+.svgimg{
+    position: sticky;
+}
+
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(193, 223, 241, 0.5);
+    color: #000000;
+}
+
+th {
+    text-align: left;
+}
+
+
+th {
+    background-color: #8fd3f1;
+}
+
+
+
+tr:hover {
+     background-color: rgba(255, 255, 255, 0.3);
+ }
+
+.adult-table{
+    border: 1px solid #9bdcf1;
+
+}

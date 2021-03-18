@@ -7,19 +7,29 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider;
 @inject NavigationManager NavigationManager;
 
-<div class="container">
-    <div class="form-group">
-        <label>User name:</label>
-        <input type="text" placeholder="user name" @bind-value="username"/>
+<div class="maincontainer">
+    <div class="container-login">
+        <div class="container-leftside">
+            <label class="loginlabel">Username</label>
+            <div class="form-group">
+                <input type="text" placeholder="user name" @bind-value="username"/>
+            </div>
+            <label class="loginlabel">Password</label>
+            <div class="form-group">
+                <input type="password" placeholder="password" @bind-value="password"/>
+            </div>
+
+
+            <a class="button1" href="" @onclick="PerformLogin">
+                Login
+            </a>
+            <div class="errorLabel">@errorMessage</div>
+
+        </div>
+        <div class="svgimg">
+            <img src="Images/login.svg" alt="Women on the laptop">
+        </div>
     </div>
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" placeholder="password" @bind-value="password"/>
-    </div>
-    <div style="color:red">@errorMessage</div>
-    <a href="" @onclick="PerformLogin">
-        Login
-    </a>
 </div>
 
 @code {

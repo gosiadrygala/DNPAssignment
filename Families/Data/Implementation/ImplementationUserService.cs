@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Families;
 using Models;
 
 namespace WebFamilies_Assignment.Data.Implementation
@@ -16,7 +17,7 @@ namespace WebFamilies_Assignment.Data.Implementation
                 new User()
                 {
                     Username = "Gosia",
-                    Password = "VeryStrongPassword",
+                    Password = "1234",
                     Role = "Administrator", 
                     BirthYear = 1998,
                     SecurityLevel = 5

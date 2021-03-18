@@ -34,7 +34,7 @@ namespace Families
             services.AddServerSideBlazor();
             services.AddScoped<InterfaceUserService, ImplementationUserService>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
-            
+            services.AddSingleton<InterfaceAdultsData, ImplementationAdultsData>();
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("MustBeAdministrator", a =>

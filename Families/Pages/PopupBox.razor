@@ -1,0 +1,28 @@
+﻿@using Models
+@inject InterfaceAdultsData AdultsData;
+<button @onclick="(() => ShowComponent = true)">Show details</button>
+<button @onclick="(() => ShowComponent = false)">Hide details</button>
+                    @if (ShowComponent)
+                    {
+                        <div class="popup-box">
+                            <p>Sex: @adult.Sex</p>
+                            <p>Height: @adult.Height</p>
+                            <p>Weight: @adult.Weight</p>
+                            <p>Eye color: @adult.EyeColor</p>
+                            <p>Hair color: @adult.HairColor</p>
+                        </div>
+                    }
+
+@code {
+    [Parameter]
+    public int id { get; set; }
+    bool ShowComponent { get; set; } = false;
+    private IList<Adult> adults;
+    private Adult adult;
+
+    protected override async Task OnInitializedAsync()
+    {
+        adults = AdultsData.GetAllAdults();
+        adult = adults.First(a => a.Id == id);
+    }
+}

@@ -13,12 +13,16 @@
 }
 
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    opacity: 0.6;
+    background-color: #8fd3f1;
+    border-bottom: 2px solid #296f8a;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+    font-size: 20px;
+    font-family: 'Adamina', serif;
+
 }
 
     .top-row ::deep a, .top-row .btn-link {
