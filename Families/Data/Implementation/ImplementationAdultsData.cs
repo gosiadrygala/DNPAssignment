@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
 using Families;
 using FileData;
 using Models;
@@ -17,6 +19,13 @@ namespace WebFamilies_Assignment.Data.Implementation
         public IList<Adult> GetAllAdults(){
             List<Adult> adultsCopy = new List<Adult>(adults);
             return adultsCopy;
+        }
+
+        public void AddAnAdult(Adult adult) {
+            int max = adults.Max(adult => adult.Id);
+            adult.Id = (++max);
+            adults.Add(adult);
+            fileContext.SaveChanges();
         }
     }
 }

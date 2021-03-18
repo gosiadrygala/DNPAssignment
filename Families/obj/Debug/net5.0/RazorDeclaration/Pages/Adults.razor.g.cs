@@ -89,6 +89,34 @@ using Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+using Microsoft.AspNetCore.Http.Features;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+using System.Runtime.CompilerServices;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+using Microsoft.AspNetCore.Mvc.Filters;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+using System.ComponentModel;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/adults")]
     public partial class Adults : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,20 +126,36 @@ using Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+#line 73 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
        
-    
+
     private IList<Adult> adults;
+    private Adult adult;
+    public bool ShowComponent = true;
+
+    [Parameter]
+    public int id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         adults = AdultsData.GetAllAdults();
     }
 
+    public void setValues(int idd)
+    {
+        adult = adults.First(a => a.Id == idd);
+    }
+
+    private void openthisfuckingpage()
+    {
+        NavigationManager.NavigateTo("/addadult");
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private InterfaceAdultsData AdultsData { get; set; }
     }
 }

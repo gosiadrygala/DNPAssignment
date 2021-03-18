@@ -101,7 +101,6 @@ using Models;
        
     [Parameter]
     public int id { get; set; }
-    bool ShowComponent { get; set; } = false;
     private IList<Adult> adults;
     private Adult adult;
 
@@ -110,6 +109,9 @@ using Models;
         adults = AdultsData.GetAllAdults();
         adult = adults.First(a => a.Id == id);
     }
+
+   
+
 
 #line default
 #line hidden

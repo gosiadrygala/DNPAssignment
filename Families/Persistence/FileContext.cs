@@ -12,8 +12,7 @@ namespace FileData
         public IList<Adult> Adults { get; private set; }
 
         private readonly string familiesFile = "families.json";
-        private readonly string adultsFile = "C://Users//Gosia//RiderProjects//" +
-                                             "Semester3//WebFamilies_Assignment//adults.json";
+        private readonly string adultsFile = "C://Users//Gosia//RiderProjects//Families//Families//adults.json";
 
         public FileContext() {
             Families = File.Exists(familiesFile) ? ReadData<Family>(familiesFile) : new List<Family>();

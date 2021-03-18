@@ -65,3 +65,5 @@ C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\PopupBox.razor.g.cs
 C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Blazored.Modal.dll
 C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration\Pages\AddAdult.razor.g.cs
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\AddAdult.razor.g.cs

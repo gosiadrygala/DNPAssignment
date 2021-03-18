@@ -1,10 +1,36 @@
 ﻿@page "/adults"
 @using Models
+@using Microsoft.AspNetCore.Http.Features
+@using System.Runtime.CompilerServices
+@using Microsoft.AspNetCore.Mvc.Filters
+@using System.ComponentModel
 @inject InterfaceAdultsData AdultsData;
+@inject NavigationManager NavigationManager;
 
 <div class="adultspage">
+    <button class="button-x" @onclick="(() => openthisfuckingpage()">Jaaaaaa</button>
     <div class="svgimg">
-        <img src="Images/adults.svg" alt="Adults">
+        <img src="Images/adultpage-svg.svg" alt="Adults">
+        <div class="btn-x">
+            @if (adult != null)
+            {
+                <button class="button-x" @onclick="(() => { adult = null; })">x</button>
+            }
+        </div>
+        <div class="popup-box">
+            @if (adult == null)
+            {
+            }
+            else
+            {
+                <p>Name: @adult.FirstName</p>
+                <p>Sex: @adult.Sex</p>
+                <p>Height: @adult.Height</p>
+                <p>Weight: @adult.Weight</p>
+                <p>Eye color: @adult.EyeColor</p>
+                <p>Hair color: @adult.HairColor</p>
+            }
+        </div>
     </div>
     <div class="adult-table">
         <thead>
@@ -19,8 +45,9 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var item in adults)
-        {
+      
+        @foreach (var item in adults){
+        
             <tr>
                 <td>@item.Id</td>
                 <td>@item.FirstName</td>
@@ -31,23 +58,40 @@
                     <td>@item.JobTitle.Salary</td>
                 </AuthorizeView>
                 <td>
-                    <PopupBox id="@item.Id"/>
+                    <button class="button-adult" @onclick="(() => setValues(item.Id))">Show details</button>
                 </td>
             </tr>
-
+            
         }
         </tbody>
     </div>
+
+
 </div>
 
 
 @code {
-    
+
     private IList<Adult> adults;
+    private Adult adult;
+    public bool ShowComponent = true;
+
+    [Parameter]
+    public int id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         adults = AdultsData.GetAllAdults();
+    }
+
+    public void setValues(int idd)
+    {
+        adult = adults.First(a => a.Id == idd);
+    }
+
+    private void openthisfuckingpage()
+    {
+        NavigationManager.NavigateTo("/addadult");
     }
 
 }
