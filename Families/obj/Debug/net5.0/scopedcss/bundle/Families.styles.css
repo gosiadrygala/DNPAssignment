@@ -1,3 +1,102 @@
+/* _content/Families/Pages/AddAdult.razor.rz.scp.css */
+h1[b-y2d1d9f31j]{
+    font-family: 'Adamina', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 60px;
+}
+.addadult-form[b-y2d1d9f31j]{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: flex-start;
+    padding-bottom: 20px;
+}
+.first-row[b-y2d1d9f31j]{
+    font-family: 'Adamina', serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.first-row1[b-y2d1d9f31j]{
+    font-family: 'Adamina', serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+input[b-y2d1d9f31j]{
+    text-align: center;
+    border: 1px solid #8fd3f1;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+input:focus[b-y2d1d9f31j], textarea:focus[b-y2d1d9f31j], select:focus[b-y2d1d9f31j]{
+    outline: none;
+}
+input:focus[b-y2d1d9f31j]::placeholder {
+    color: transparent;
+}
+
+label[b-y2d1d9f31j]{
+    padding-top: 10px;
+}
+.addadult-button[b-y2d1d9f31j]{
+    background-color: white;
+    color: black;
+    border: 1px solid #8fd3f1;
+    border-radius: 10px;
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+
+.svgimg[b-y2d1d9f31j]{
+    position: fixed;
+    bottom: 20px;
+    left: 120px;
+}
+
+.add-adultcontainer[b-y2d1d9f31j]{
+    position: fixed;
+    bottom: 65px;
+    left: 400px;
+    
+}
+
+.goback-link[b-y2d1d9f31j]{
+    margin-top: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: stretch;
+    padding-right: 100px;
+    font-family: 'Adamina', serif;
+    color: black;
+    position: fixed;
+}
+
+.goback-link:hover[b-y2d1d9f31j]{
+    color:#8fd3f1;
+}
 /* _content/Families/Pages/Adults.razor.rz.scp.css */
 .adultspage[b-0g5o9kjpes]{
     display: flex;
@@ -33,6 +132,8 @@ td[b-0g5o9kjpes] {
 
 th[b-0g5o9kjpes] {
     text-align: left;
+    color: #ffffff;
+    font-weight: lighter;
 }
 
 
@@ -87,7 +188,38 @@ tr:hover[b-0g5o9kjpes] {
     color: #8fd3f1;
     border: 0 ;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.addadult-link[b-0g5o9kjpes]{
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #8FD3F1;
+    border: 1px solid #8fd3f1;
+    font-size: 18px;
+    padding: 12px;
+}
+.addadult-link:hover[b-0g5o9kjpes]{
+    color: black;
+}
+
+.searchbar[b-0g5o9kjpes]{
+    width: 843px;
+    border: 2px solid #8fd3f1;
+    box-sizing: border-box;
+    font-family: 'Adamina', serif;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+}
+input:focus[b-0g5o9kjpes], textarea:focus[b-0g5o9kjpes], select:focus[b-0g5o9kjpes]{
+    outline: none;
+}
+input:focus[b-0g5o9kjpes]::placeholder {
+    color: transparent;
+}
+input[b-0g5o9kjpes]::placeholder {
+    color: black;
 }
 /* _content/Families/Pages/Index.razor.rz.scp.css */
 .mainpage-container[b-aw70pjzgr6]{
@@ -144,7 +276,6 @@ input[b-jvg13b0ihw]{
     width: 100%;
     box-sizing: border-box;
     font-size: 20px;
-
 }
 
 .loginlabel[b-jvg13b0ihw]{
@@ -195,6 +326,10 @@ input:focus[b-jvg13b0ihw]::placeholder {
     position: relative;
     display: flex;
     flex-direction: column;
+    
+}
+a[b-2szbgctje9]{
+    color: white;
 }
 
 .main[b-2szbgctje9] {

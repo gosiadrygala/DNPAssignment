@@ -3,67 +3,105 @@
 
 @inject InterfaceAdultsData AdultsData;
 @inject NavigationManager NavigationManager;
-<div>
-<EditForm Model="@newAdult" On OnValidSubmit="@AddNewAdult">
-    <DataAnnotationsValidator/>
-    <ValidationSummary/>
-    <div class="form-group">
-        user Id: <br/>
-        <InputNumber @bind-Value="@newAdult.Id"/>
+<h1> Fill in the form to add a new adult </h1>
+ 
+<div class="svgimg">
+    <img src="Images/addadult.svg" alt="Adults">
+    <div class="add-adultcontainer">
+        <EditForm Model="@newAdult" On OnValidSubmit="@AddNewAdult">
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+
+
+            <div class="addadult-form">
+                <div class="first-row1">
+                    <label class="addadult-label">ID:</label>
+                    <input type="number" placeholder="id" @bind-value="@id"/>
+
+                    <label class="addadult-label">First Name: </label>
+                    <input type="text" placeholder="firstname" @bind-value="@firstName"/>
+
+                    <label class="addadult-label">Last Name: </label>
+                    <input type="text" placeholder="lastname" @bind-value="@lastName"/>
+
+                </div>
+                <div class="first-row">
+
+                    <label class="addadult-label">Age: </label>
+                    <input type="number" placeholder="age" @bind-value="age"/>
+
+                    <label class="addadult-label">Weight: </label>
+                    <input type="number" placeholder="weight" @bind-value="weight"/>
+
+                    <label class="addadult-label">Eye Color: </label>
+                    <input type="text" placeholder="eye color" @bind-value="@eyeColor"/>
+
+                    <label class="addadult-label">Height: </label>
+                    <input type="number" placeholder="height" @bind-value="@height"/>
+
+                    <label class="addadult-label">Hair Color: </label>
+                    <input type="text" placeholder="hair color" @bind-value="@hairColor"/>
+
+                    <p class="actions">
+                        <button class="addadult-button" type="submit">Create</button>
+                    </p>
+                </div>
+                <div class="first-row">
+                    <label class="addadult-label">Sex: </label>
+                    <input type="text" placeholder="sex" @bind-value="@sex"/>
+
+                    <label class="addadult-label">Job Title: </label>
+                    <input type="text" placeholder="job title" @bind-value="@jobTitle"/>
+
+                    <label class="addadult-label">Salary: </label>
+                    <input type="number" placeholder="salary" @bind-value="@salary"/>
+
+
+                </div>
+
+            </div>
+
+        </EditForm>
     </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.FirstName"/>
-    </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.LastName"/>
-    </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.HairColor"/>
-    </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.EyeColor"/>
-    </div>
-    <div class="form-group">
-        user Id: <br/>
-        <InputNumber @bind-Value="@newAdult.Age"/>
-    </div>
-    <div class="form-group">
-        user Id: <br/>
-        <InputNumber @bind-Value="@newAdult.Weight"/>
-    </div>
-    <div class="form-group">
-        user Id: <br/>
-        <InputNumber @bind-Value="@newAdult.Height"/>
-    </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.Sex"/>
-    </div>
-    <div class="form-group">
-        Title: <br/>
-        <InputTextArea rows="4" @bind-Value="@newAdult.JobTitle.JobTitle"/>
-    </div>
-    <div class="form-group">
-        user Id: <br/>
-        <InputNumber @bind-Value="@newAdult.JobTitle.Salary"/>
-    </div>
-    
-   
-    <p class="actions">
-        <button class ="btn btn-outline-dark" type="submit">Create</button>
-    </p>
-</EditForm>
+  
 </div>
+ <a class="goback-link" href="/adults"> Go back to adult overview</a>
+ 
 @code {
-    private readonly Adult newAdult = new Adult();
+    private Adult newAdult = new Adult();
+
+    private int id;
+    private string lastName;
+    private string firstName;
+    private string hairColor;
+    private string eyeColor;
+    private int age;
+    private int height;
+    private float weight;
+    private string sex;
+    private string jobTitle;
+    private int salary;
+
 
     private void AddNewAdult()
     {
+        newAdult.Id = id;
+        newAdult.LastName = lastName;
+        newAdult.FirstName = firstName;
+        newAdult.HairColor = hairColor;
+        newAdult.EyeColor = eyeColor;
+        newAdult.Age = age;
+        newAdult.Height = height;
+        newAdult.Weight = weight;
+        newAdult.Sex = sex;
+        Job newJob = new Job();
+        newJob.JobTitle = jobTitle;
+        newJob.Salary = salary;
+        newAdult.JobTitle = newJob;
+
         AdultsData.AddAnAdult(newAdult);
         NavigationManager.NavigateTo("/adults");
     }
+
+
 }

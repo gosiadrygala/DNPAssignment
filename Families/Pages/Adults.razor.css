@@ -32,6 +32,8 @@ td {
 
 th {
     text-align: left;
+    color: #ffffff;
+    font-weight: lighter;
 }
 
 
@@ -86,5 +88,36 @@ tr:hover {
     color: #8fd3f1;
     border: 0 ;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.addadult-link{
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #8FD3F1;
+    border: 1px solid #8fd3f1;
+    font-size: 18px;
+    padding: 12px;
+}
+.addadult-link:hover{
+    color: black;
+}
+
+.searchbar{
+    width: 843px;
+    border: 2px solid #8fd3f1;
+    box-sizing: border-box;
+    font-family: 'Adamina', serif;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+input::placeholder {
+    color: black;
 }

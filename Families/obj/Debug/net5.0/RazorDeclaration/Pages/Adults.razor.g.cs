@@ -117,6 +117,13 @@ using System.ComponentModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 7 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/adults")]
     public partial class Adults : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -126,9 +133,10 @@ using System.ComponentModel;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 73 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+#line 77 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
        
 
+    private IList<Adult> adultsToShow;
     private IList<Adult> adults;
     private Adult adult;
     public bool ShowComponent = true;
@@ -139,6 +147,7 @@ using System.ComponentModel;
     protected override async Task OnInitializedAsync()
     {
         adults = AdultsData.GetAllAdults();
+        adultsToShow = adults;
     }
 
     public void setValues(int idd)
@@ -146,9 +155,25 @@ using System.ComponentModel;
         adult = adults.First(a => a.Id == idd);
     }
 
-    private void openthisfuckingpage()
+
+    private void Search(ChangeEventArgs changeEventArgs)
     {
-        NavigationManager.NavigateTo("/addadult");
+        string? searchByName = null;
+        try
+        {
+            searchByName = changeEventArgs.Value.ToString();
+        }catch(Exception e){}
+
+        if (searchByName != null)
+        {
+            adultsToShow = adults.Where(adult => adult.FirstName.Contains(searchByName) || adult.LastName.Contains(searchByName)).ToList();
+            
+        }
+        else
+        {
+            adultsToShow = adults;
+        }
+
     }
 
 

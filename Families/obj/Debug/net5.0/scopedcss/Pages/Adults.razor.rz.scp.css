@@ -32,6 +32,8 @@ td[b-0g5o9kjpes] {
 
 th[b-0g5o9kjpes] {
     text-align: left;
+    color: #ffffff;
+    font-weight: lighter;
 }
 
 
@@ -86,5 +88,36 @@ tr:hover[b-0g5o9kjpes] {
     color: #8fd3f1;
     border: 0 ;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.addadult-link[b-0g5o9kjpes]{
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #8FD3F1;
+    border: 1px solid #8fd3f1;
+    font-size: 18px;
+    padding: 12px;
+}
+.addadult-link:hover[b-0g5o9kjpes]{
+    color: black;
+}
+
+.searchbar[b-0g5o9kjpes]{
+    width: 843px;
+    border: 2px solid #8fd3f1;
+    box-sizing: border-box;
+    font-family: 'Adamina', serif;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+}
+input:focus[b-0g5o9kjpes], textarea:focus[b-0g5o9kjpes], select:focus[b-0g5o9kjpes]{
+    outline: none;
+}
+input:focus[b-0g5o9kjpes]::placeholder {
+    color: transparent;
+}
+input[b-0g5o9kjpes]::placeholder {
+    color: black;
 }

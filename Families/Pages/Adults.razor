@@ -4,11 +4,14 @@
 @using System.Runtime.CompilerServices
 @using Microsoft.AspNetCore.Mvc.Filters
 @using System.ComponentModel
+@using System.IO
 @inject InterfaceAdultsData AdultsData;
 @inject NavigationManager NavigationManager;
 
+<p>
+<input class="searchbar" placeholder="search by name or surname" type="text" @oninput="@((arg) => Search(arg))" />
+</p>
 <div class="adultspage">
-    <button class="button-x" @onclick="(() => openthisfuckingpage()">Jaaaaaa</button>
     <div class="svgimg">
         <img src="Images/adultpage-svg.svg" alt="Adults">
         <div class="btn-x">
@@ -46,7 +49,7 @@
         </thead>
         <tbody>
       
-        @foreach (var item in adults){
+        @foreach (var item in adultsToShow){
         
             <tr>
                 <td>@item.Id</td>
@@ -64,14 +67,16 @@
             
         }
         </tbody>
+         
     </div>
-
+<a  class="addadult-link" href="/addadult"> Add new adult to the list </a>
 
 </div>
 
 
 @code {
 
+    private IList<Adult> adultsToShow;
     private IList<Adult> adults;
     private Adult adult;
     public bool ShowComponent = true;
@@ -82,6 +87,7 @@
     protected override async Task OnInitializedAsync()
     {
         adults = AdultsData.GetAllAdults();
+        adultsToShow = adults;
     }
 
     public void setValues(int idd)
@@ -89,9 +95,25 @@
         adult = adults.First(a => a.Id == idd);
     }
 
-    private void openthisfuckingpage()
+
+    private void Search(ChangeEventArgs changeEventArgs)
     {
-        NavigationManager.NavigateTo("/addadult");
+        string? searchByName = null;
+        try
+        {
+            searchByName = changeEventArgs.Value.ToString();
+        }catch(Exception e){}
+
+        if (searchByName != null)
+        {
+            adultsToShow = adults.Where(adult => adult.FirstName.Contains(searchByName) || adult.LastName.Contains(searchByName)).ToList();
+            
+        }
+        else
+        {
+            adultsToShow = adults;
+        }
+
     }
 
 }

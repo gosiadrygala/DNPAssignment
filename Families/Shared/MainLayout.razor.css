@@ -2,6 +2,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    
+}
+a{
+    color: white;
 }
 
 .main {
