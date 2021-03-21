@@ -1,0 +1,20 @@
+﻿@page "/statistics"
+@attribute [Authorize(Policy = "SecurityLevel3")]
+
+@inject IJSRuntime JsRuntime;
+<h3>Hair Color distribution among families </h3>
+<button class="btn-generate" @onclick="GeneratePieChartBlazor">Generate the pie chart</button>
+<div id="chartdiv"></div>
+
+
+
+@code {
+    public PieChartData pieChartData = new PieChartData();
+    public List<PieChartData> pieChartDatas = new List<PieChartData>();
+
+    private async Task GeneratePieChartBlazor()
+    {
+        pieChartDatas = pieChartData.GetPieChartDatas();
+        await JsRuntime.InvokeVoidAsync("GeneratePieChart", pieChartDatas);
+    }
+}

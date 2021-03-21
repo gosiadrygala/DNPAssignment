@@ -7,5 +7,6 @@ namespace Families
     {
         IList<Adult> GetAllAdults();
         void AddAnAdult(Adult adult);
+        void RemoveAnAdult(int id);
     }
 }

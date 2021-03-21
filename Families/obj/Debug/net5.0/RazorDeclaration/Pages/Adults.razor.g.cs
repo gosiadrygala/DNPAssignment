@@ -133,7 +133,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 77 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
+#line 91 "C:\Users\Gosia\RiderProjects\Families\Families\Pages\Adults.razor"
        
 
     private IList<Adult> adultsToShow;
@@ -161,19 +161,27 @@ using System.IO;
         string? searchByName = null;
         try
         {
-            searchByName = changeEventArgs.Value.ToString();
-        }catch(Exception e){}
+            searchByName = changeEventArgs.Value.ToString().ToLower();
+        }
+        catch (Exception e)
+        {
+        }
 
         if (searchByName != null)
         {
-            adultsToShow = adults.Where(adult => adult.FirstName.Contains(searchByName) || adult.LastName.Contains(searchByName)).ToList();
-            
+            adultsToShow = adults.Where(adult => adult.FirstName.ToLowerInvariant().Contains(searchByName) || adult.LastName.ToLowerInvariant().Contains(searchByName)).ToList();
         }
         else
         {
             adultsToShow = adults;
         }
+    }
 
+    private void RemoveAnAdult(int itemId)
+    {
+        Adult adultToRemove = adultsToShow.First(adult => adult.Id == itemId);
+        AdultsData.RemoveAnAdult(itemId);
+        adultsToShow.Remove(adultToRemove);
     }
 
 

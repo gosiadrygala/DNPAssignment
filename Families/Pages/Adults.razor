@@ -9,7 +9,7 @@
 @inject NavigationManager NavigationManager;
 
 <p>
-<input class="searchbar" placeholder="search by name or surname" type="text" @oninput="@((arg) => Search(arg))" />
+    <input class="searchbar" placeholder="Search by name or surname" type="text" @oninput="@((arg) => Search(arg))"/>
 </p>
 <div class="adultspage">
     <div class="svgimg">
@@ -43,14 +43,19 @@
             <th>Last Name</th>
             <th>Age</th>
             <th>Job Title</th>
-            <th>Salary</th>
+            <AuthorizeView Policy="MustBeAdministrator">
+                <th>Salary</th>
+            </AuthorizeView>
             <th>Details</th>
+            <AuthorizeView Policy="MustBeAdministrator">
+                <th>Remove</th>
+            </AuthorizeView>
         </tr>
         </thead>
         <tbody>
-      
-        @foreach (var item in adultsToShow){
-        
+
+        @foreach (var item in adultsToShow)
+        {
             <tr>
                 <td>@item.Id</td>
                 <td>@item.FirstName</td>
@@ -63,14 +68,23 @@
                 <td>
                     <button class="button-adult" @onclick="(() => setValues(item.Id))">Show details</button>
                 </td>
+                <AuthorizeView Policy="MustBeAdministrator">
+                    <td class="trashcolumn">
+                        <div style="text-align: center;" >
+                            <button class="remove-btn" @onclick="@(() => RemoveAnAdult(item.Id))">
+                                <i class="oi oi-trash" style="color: #8fd3f1 "/>
+                            </button></div>
+                    </td>
+                </AuthorizeView>
             </tr>
-            
         }
         </tbody>
-         
-    </div>
-<a  class="addadult-link" href="/addadult"> Add new adult to the list </a>
 
+    </div>
+    <AuthorizeView Policy="MustBeAdministrator">
+    <a class="addadult-link" href="/addadult"> + Add an adult </a>
+
+    </AuthorizeView>
 </div>
 
 
@@ -101,19 +115,27 @@
         string? searchByName = null;
         try
         {
-            searchByName = changeEventArgs.Value.ToString();
-        }catch(Exception e){}
+            searchByName = changeEventArgs.Value.ToString().ToLower();
+        }
+        catch (Exception e)
+        {
+        }
 
         if (searchByName != null)
         {
-            adultsToShow = adults.Where(adult => adult.FirstName.Contains(searchByName) || adult.LastName.Contains(searchByName)).ToList();
-            
+            adultsToShow = adults.Where(adult => adult.FirstName.ToLowerInvariant().Contains(searchByName) || adult.LastName.ToLowerInvariant().Contains(searchByName)).ToList();
         }
         else
         {
             adultsToShow = adults;
         }
+    }
 
+    private void RemoveAnAdult(int itemId)
+    {
+        Adult adultToRemove = adultsToShow.First(adult => adult.Id == itemId);
+        AdultsData.RemoveAnAdult(itemId);
+        adultsToShow.Remove(adultToRemove);
     }
 
 }

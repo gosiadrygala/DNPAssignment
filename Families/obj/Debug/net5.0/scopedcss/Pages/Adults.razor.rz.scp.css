@@ -33,12 +33,13 @@ td[b-0g5o9kjpes] {
 th[b-0g5o9kjpes] {
     text-align: left;
     color: #ffffff;
+    background-color: #67B7DC;
     font-weight: lighter;
 }
 
 
 th[b-0g5o9kjpes] {
-    background-color: #8fd3f1;
+    background-color: #67B7DC;
 }
 
 
@@ -48,8 +49,7 @@ tr:hover[b-0g5o9kjpes] {
  }
 
 .adult-table[b-0g5o9kjpes]{
-    border: 1px solid #9bdcf1;
-
+    border: 1px solid #ffffff;
 }
 
 .popup-box[b-0g5o9kjpes]{
@@ -70,7 +70,6 @@ tr:hover[b-0g5o9kjpes] {
     background-color: white;
     color: black;
     border: 1px solid #8fd3f1;
-    border-radius: 10px;
 }
 
 .button-adult:focus[b-0g5o9kjpes], textarea:focus[b-0g5o9kjpes], select:focus[b-0g5o9kjpes]{
@@ -86,7 +85,7 @@ tr:hover[b-0g5o9kjpes] {
 .button-x[b-0g5o9kjpes]{
     background-color: white;
     color: #8fd3f1;
-    border: 0 ;
+    border: 0;
     border-radius: 10px;
     font-size: 25px;
 }
@@ -95,12 +94,15 @@ tr:hover[b-0g5o9kjpes] {
     margin-left: 20px;
     background-color: #ffffff;
     color: #8FD3F1;
-    border: 1px solid #8fd3f1;
-    font-size: 18px;
-    padding: 12px;
+    font-size: 27px;
+    font-weight: 1;
 }
 .addadult-link:hover[b-0g5o9kjpes]{
-    color: black;
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #8FD3F1;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 .searchbar[b-0g5o9kjpes]{
@@ -121,3 +123,15 @@ input:focus[b-0g5o9kjpes]::placeholder {
 input[b-0g5o9kjpes]::placeholder {
     color: black;
 }
+
+.oi oi-trash[b-0g5o9kjpes]{
+    color: #8fd3f1 ;
+}
+
+.remove-btn[b-0g5o9kjpes]{
+    background-color: white;
+    color: #8fd3f1;
+    border: 1px solid #8fd3f1;
+    padding-left: 5px;
+}
+

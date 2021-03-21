@@ -27,5 +27,11 @@ namespace WebFamilies_Assignment.Data.Implementation
             adults.Add(adult);
             fileContext.SaveChanges();
         }
+
+        public void RemoveAnAdult(int id) {
+            Adult adult = adults.First(adult => adult.Id == id);
+            adults.Remove(adult);
+            fileContext.SaveChanges();
+        }
     }
 }

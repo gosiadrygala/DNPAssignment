@@ -68,3 +68,17 @@ C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Microsoft.JSInte
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration\Pages\AddAdult.razor.g.cs
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\AddAdult.razor.g.cs
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\scopedcss\Pages\AddAdult.razor.rz.scp.css
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Children.razor.g.cs
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\Children.razor.g.cs
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\scopedcss\Pages\Children.razor.rz.scp.css
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Blazor.Charts.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Blazor.Core.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Blazor.Data.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Blazor.DataVizCommon.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Blazor.Themes.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.Licensing.dll
+C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.PdfExport.Net.dll
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Statistics.razor.g.cs
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\Statistics.razor.g.cs
+C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\scopedcss\Pages\Statistics.razor.rz.scp.css

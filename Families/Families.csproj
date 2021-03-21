@@ -6,6 +6,8 @@
 
     <ItemGroup>
       <PackageReference Include="Blazored.Modal" Version="6.0.1" />
+      <PackageReference Include="Syncfusion.Blazor.Charts" Version="18.4.0.48" />
+      <PackageReference Include="Syncfusion.Licensing" Version="18.4.0.48" />
     </ItemGroup>
 
 </Project>

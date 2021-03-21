@@ -33,12 +33,13 @@ td {
 th {
     text-align: left;
     color: #ffffff;
+    background-color: #67B7DC;
     font-weight: lighter;
 }
 
 
 th {
-    background-color: #8fd3f1;
+    background-color: #67B7DC;
 }
 
 
@@ -48,8 +49,7 @@ tr:hover {
  }
 
 .adult-table{
-    border: 1px solid #9bdcf1;
-
+    border: 1px solid #ffffff;
 }
 
 .popup-box{
@@ -70,7 +70,6 @@ tr:hover {
     background-color: white;
     color: black;
     border: 1px solid #8fd3f1;
-    border-radius: 10px;
 }
 
 .button-adult:focus, textarea:focus, select:focus{
@@ -86,7 +85,7 @@ tr:hover {
 .button-x{
     background-color: white;
     color: #8fd3f1;
-    border: 0 ;
+    border: 0;
     border-radius: 10px;
     font-size: 25px;
 }
@@ -95,12 +94,15 @@ tr:hover {
     margin-left: 20px;
     background-color: #ffffff;
     color: #8FD3F1;
-    border: 1px solid #8fd3f1;
-    font-size: 18px;
-    padding: 12px;
+    font-size: 27px;
+    font-weight: 1;
 }
 .addadult-link:hover{
-    color: black;
+    margin-left: 20px;
+    background-color: #ffffff;
+    color: #8FD3F1;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 .searchbar{
@@ -121,3 +123,15 @@ input:focus::placeholder {
 input::placeholder {
     color: black;
 }
+
+.oi oi-trash{
+    color: #8fd3f1 ;
+}
+
+.remove-btn{
+    background-color: white;
+    color: #8fd3f1;
+    border: 1px solid #8fd3f1;
+    padding-left: 5px;
+}
+

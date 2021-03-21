@@ -1,0 +1,100 @@
+﻿@page "/children"
+@using Models
+@using System.Text
+@using Microsoft.AspNetCore.Authentication.OAuth.Claims
+@inject InterfaceChildrenData ChildrenData;
+@inject NavigationManager NavigationManager;
+
+<p>
+<input class="searchbar" placeholder="Search by name or surname" type="text" @oninput="@((arg) => Search(arg))" />
+</p>
+<div class="children-page">
+    <div class="children-pic">
+        <img src="Images/children.svg" alt="Adults">
+    </div>
+    @if (childrenToShow == null)
+    {
+        <p>
+            <em>Loading...</em>
+        </p>
+    }
+    else if (!childrenToShow.Any())
+    {
+        <p>
+            <em>No Children exist. Please add some.</em>
+        </p>
+    }
+    else
+    {
+        <table class="children-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Interests</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in childrenToShow){
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Age</td>
+                    <td>@GetAllPets(item)</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private IList<Child> children;
+    private IList<Child> childrenToShow;
+   
+
+    protected override async Task OnInitializedAsync()
+    {
+        children = ChildrenData.GetAllChildren();
+        childrenToShow = children;
+    }
+
+    private string GetAllPets(Child child)
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = 0; i < child.Interests.Count; i++)
+        {
+            if (i == 0)
+            {
+                stringBuilder.Append(child.Interests[i].Type);
+            }
+            else
+            {
+                stringBuilder.Append(", "+child.Interests[i].Type);
+            }
+            
+        }
+
+        return stringBuilder.ToString();
+    }
+
+    private void Search(ChangeEventArgs changeEventArgs)
+    {
+        string? searchByName = null;
+        try
+        {
+            searchByName = changeEventArgs.Value.ToString();
+        }catch(Exception e){}
+        if (searchByName != null){
+            childrenToShow = children.Where(child => child.FirstName.Contains(searchByName) || 
+                                                     child.LastName.Contains(searchByName)).ToList();
+        }
+        else
+        {
+            childrenToShow = children;
+        }
+    }
+
+}

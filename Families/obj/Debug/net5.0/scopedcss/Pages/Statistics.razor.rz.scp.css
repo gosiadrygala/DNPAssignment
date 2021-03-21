@@ -1,0 +1,52 @@
+h3[b-bkuw6p1jt0]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-generate[b-bkuw6p1jt0] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-generate:focus[b-bkuw6p1jt0] {
+    background-color: white;
+    color: black;
+    border: 1px solid #8fd3f1;
+    border-radius: 10px;
+}
+
+.btn-generate:active[b-bkuw6p1jt0]{
+    outline: none;
+    border: 1px solid #8fd3f1;
+    border-radius: 10px;
+}
+
+.btn-generate[b-bkuw6p1jt0] {
+    background-color: white;
+    color: black;
+    border: 1px solid #8fd3f1;
+    border-radius: 10px;
+    padding: 5px 30px;
+    margin-top: 20px;
+
+}
+
+.button1:hover[b-bkuw6p1jt0] {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 5px 30px;
+}
+input:focus[b-bkuw6p1jt0], textarea:focus[b-bkuw6p1jt0], select:focus[b-bkuw6p1jt0]{
+    outline: none;
+}
+input:focus[b-bkuw6p1jt0]::placeholder {
+    color: transparent;
+}
+
+.btn-generate:focus[b-bkuw6p1jt0], textarea:focus[b-bkuw6p1jt0], select:focus[b-bkuw6p1jt0]{
+    outline: none;
+}
