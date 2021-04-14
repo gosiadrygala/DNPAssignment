@@ -4,5 +4,5 @@
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Core" Path="C:\Users\Gosia\.nuget\packages\syncfusion.blazor.core\18.4.0.48\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Data" Path="C:\Users\Gosia\.nuget\packages\syncfusion.blazor.data\18.4.0.48\build\..\staticwebassets\" />
   <ContentRoot BasePath="_content/Syncfusion.Blazor.Themes" Path="C:\Users\Gosia\.nuget\packages\syncfusion.blazor.themes\18.4.0.48\build\..\staticwebassets\" />
-  <ContentRoot BasePath="/" Path="C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\Families.csproj": {}
+    "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\Families.csproj": {
+    "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\Families.csproj",
+        "projectUniqueName": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj",
         "projectName": "Families",
-        "projectPath": "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\Families.csproj",
+        "projectPath": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj",
         "packagesPath": "C:\\Users\\Gosia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gosia\\RiderProjects\\Families\\Families\\obj\\",
+        "outputPath": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gosia\\AppData\\Roaming\\NuGet\\NuGet.Config"
