@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using FileData;
+using System.Threading.Tasks;
 using Models;
 using WebFamilies_Assignment.Data.Implementation;
 
@@ -12,12 +12,14 @@ namespace Families
         public string HairColor { get; set; }
 
         public string TotalPercentage => (this.Amount * 100) / this.TotalAmount + "%";
-        
-        IList<Adult> adults = new ImplementationAdultsData().GetAllAdults();
-        IList<Child> children = new ImplementationChildrenData().GetAllChildren();
 
-        public List<PieChartData> GetPieChartDatas()
+        private List<Adult> adults = new List<Adult>();
+        private IList<Child> children = new List<Child>();
+
+        public async Task<List<PieChartData>> GetPieChartDatas()
         {
+            adults =  await new ImplementationAdultsData().GetAllAdults();
+            children = await new ImplementationChildrenData().GetAllChildren();
             List<PieChartData> pieChartData = new List<PieChartData>();
             int totalAmount = adults.Count + children.Count;
             pieChartData.Add(new PieChartData(){HairColor = "Black", TotalAmount = totalAmount, Amount = GetHairColorAmount("Black")});
@@ -27,8 +29,8 @@ namespace Families
             pieChartData.Add(new PieChartData(){HairColor = "White", TotalAmount = totalAmount, Amount = GetHairColorAmount("White")});
             return pieChartData;
         }
-        
-        public int GetHairColorAmount(string haircolor) {
+
+        private int GetHairColorAmount(string haircolor) {
             int amount = 0;
             foreach (var item in adults)
             {

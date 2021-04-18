@@ -83,7 +83,7 @@
     private int salary;
 
 
-    private void AddNewAdult()
+    private async Task AddNewAdult()
     {
         newAdult.Id = id;
         newAdult.LastName = lastName;
@@ -99,7 +99,7 @@
         newJob.Salary = salary;
         newAdult.JobTitle = newJob;
 
-        AdultsData.AddAnAdult(newAdult);
+        await AdultsData.AddAnAdult(newAdult);
         NavigationManager.NavigateTo("/adults");
     }
 

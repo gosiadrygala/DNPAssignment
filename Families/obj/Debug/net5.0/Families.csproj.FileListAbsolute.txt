@@ -82,10 +82,8 @@ C:\Users\Gosia\RiderProjects\Families\Families\bin\Debug\net5.0\Syncfusion.PdfEx
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Statistics.razor.g.cs
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\Razor\Pages\Statistics.razor.g.cs
 C:\Users\Gosia\RiderProjects\Families\Families\obj\Debug\net5.0\scopedcss\Pages\Statistics.razor.rz.scp.css
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\adults.json
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\appsettings.json
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\families.json
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\Families.StaticWebAssets.xml
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\Families.exe
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\bin\Debug\net5.0\Families.deps.json
@@ -115,7 +113,6 @@ C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Famili
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.RazorComponent.input.cache
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Logout.razor.g.cs
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\PopupBox.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\AddAdult.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Adults.razor.g.cs
@@ -124,7 +121,6 @@ C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorD
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Pages\Statistics.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.RazorComponent.output.cache
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\RazorDeclaration\Families.dll
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.TagHelpers.input.cache
@@ -132,7 +128,6 @@ C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Famili
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.RazorCoreGenerate.cache
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\App.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\Logout.razor.g.cs
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\PopupBox.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\AddAdult.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\Adults.razor.g.cs
@@ -141,7 +136,6 @@ C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\Statistics.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.RazorAssemblyInfo.cache
@@ -155,7 +149,6 @@ C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scoped
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\Pages\Login.razor.rz.scp.css
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\Pages\Statistics.razor.rz.scp.css
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\bundle\Families.styles.css
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\scopedcss\projectbundle\Families.bundle.scp.css
 C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\obj\Debug\net5.0\Families.RazorTargetAssemblyInfo.cache

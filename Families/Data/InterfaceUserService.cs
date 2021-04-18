@@ -1,9 +1,10 @@
-﻿using Models;
+﻿using System.Threading.Tasks;
+using Models;
 
 namespace Families
 {
     public interface InterfaceUserService
     {
-        User ValidateUserLogin(string Username, string Password);
+        Task<User> ValidateUserLogin(string Username, string Password);
     }
 }

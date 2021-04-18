@@ -105,7 +105,7 @@ using Families.Shared;
 
     private async Task GeneratePieChartBlazor()
     {
-        pieChartDatas = pieChartData.GetPieChartDatas();
+        pieChartDatas = await pieChartData.GetPieChartDatas();
         await JsRuntime.InvokeVoidAsync("GeneratePieChart", pieChartDatas);
     }
 

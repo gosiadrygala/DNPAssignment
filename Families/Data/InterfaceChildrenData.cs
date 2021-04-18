@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Models;
 
 namespace Families
 {
     public interface InterfaceChildrenData
     {
-        IList<Child> GetAllChildren();
-        void AddAChild(Child child);
+        Task<IList<Child>> GetAllChildren();
     }
 }

@@ -1,37 +1,34 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 using Families;
-using FileData;
 using Models;
 
 namespace WebFamilies_Assignment.Data.Implementation
 {
     public class ImplementationChildrenData : InterfaceChildrenData
     {
-        private IList<Family> families = new List<Family>();
-        private IList<Child> children = new List<Child>();
-        private FileContext fileContext = new FileContext();
 
-        public ImplementationChildrenData(){
-            families = fileContext.Families;
-        }
-
-        public IList<Child> GetAllChildren()
+        public async Task<IList<Child>> GetAllChildren()
         {
-            foreach (var item in families)
-            {
-                for (int i = 0; i < item.Children.Count; i++)
-                {
-                     children.Add(item.Children[i]);
-                }
-               
-            }
+            HttpClient client = new HttpClient();
+            HttpResponseMessage responseMessage = await client.GetAsync("https://localhost:5004/Children");
 
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception($"Error: {responseMessage.StatusCode}, {responseMessage.ReasonPhrase}");
+
+            string result = await responseMessage.Content.ReadAsStringAsync();
+
+            List<Child> children = JsonSerializer.Deserialize<List<Child>>(result, new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
+           
             return children;
         }
 
-        public void AddAChild(Child child)
-        {
-            throw new System.NotImplementedException();
-        }
+       
     }
 }

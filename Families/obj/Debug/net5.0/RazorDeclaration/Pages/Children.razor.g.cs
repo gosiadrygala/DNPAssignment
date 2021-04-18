@@ -114,13 +114,13 @@ using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 #nullable restore
 #line 52 "C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\Pages\Children.razor"
        
-    private IList<Child> children;
-    private IList<Child> childrenToShow;
+    private IList<Child> children = new List<Child>();
+    private IList<Child> childrenToShow = new List<Child>();
    
 
     protected override async Task OnInitializedAsync()
     {
-        children = ChildrenData.GetAllChildren();
+        var children = await ChildrenData.GetAllChildren();
         childrenToShow = children;
     }
 

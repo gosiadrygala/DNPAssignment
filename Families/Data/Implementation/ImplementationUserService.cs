@@ -1,59 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 using Families;
 using Models;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace WebFamilies_Assignment.Data.Implementation
 {
     public class ImplementationUserService : InterfaceUserService
     {
-        private List<User> users;
 
-        public ImplementationUserService()
+        public async Task<User> ValidateUserLogin(string username, string password)
         {
-            users = new[]
+
+            HttpClient client = new HttpClient();
+
+            User user = new()
             {
-                new User()
-                {
-                    Username = "Gosia",
-                    Password = "1234",
-                    Role = "Administrator", 
-                    BirthYear = 1998,
-                    SecurityLevel = 5
+                Username = username,
+                Password = password
+            };
 
-                },
-                new User()
-                {
-                    Username = "SomeoneSecret",
-                    Password = "VerySecretPassword",
-                    Role = "Normal user", 
-                    BirthYear = 1979,
-                    SecurityLevel = 2
-                },
-                new User()
-                {
-                    Username = "Anonymouse",
-                    Password = "YouWouldNeverExpectSuchPassword",
-                    Role = "Someone between admin and normal user", 
-                    BirthYear = 1560,
-                    SecurityLevel = 3
-                }
-            }.ToList();
-        }
-        
-        public User ValidateUserLogin(string Username, string Password)
-        {
-            User someUser = users.First(user => user.Username.Equals(Username));
+            string userAsJson = JsonSerializer.Serialize(user);
 
-            if (someUser == null) throw new Exception("Hey there! " +
-                                                      "Unfortunately user was not found *sad sound* ");
+            StringContent content = new StringContent(
+                userAsJson, Encoding.UTF8, "application/json"
+            );
 
-            if (!someUser.Password.Equals(Password))
-                throw new Exception("Are you trying to hack my web with a wrong password? *sad sound* ");
+            HttpResponseMessage responseMessage = await client.PostAsync("https://localhost:5004/User", content);
+
+            if (!responseMessage.IsSuccessStatusCode)
+                throw new Exception($"Error: {responseMessage.StatusCode}, {responseMessage.ReasonPhrase}");
             
+            string someUser = await responseMessage.Content.ReadAsStringAsync();
+
+            User finalUser = JsonSerializer.Deserialize<User>(someUser, new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            });
             
-            return someUser;
+            return finalUser;
         }
         
     }

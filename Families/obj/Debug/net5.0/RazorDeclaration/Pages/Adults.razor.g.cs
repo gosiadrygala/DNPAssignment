@@ -136,17 +136,16 @@ using System.IO;
 #line 91 "C:\Users\Gosia\RiderProjects\AssignmentFamilies\Families\Pages\Adults.razor"
        
 
-    private IList<Adult> adultsToShow;
+    private IList<Adult> adultsToShow = new List<Adult>();
     private IList<Adult> adults;
     private Adult adult;
-    public bool ShowComponent = true;
 
     [Parameter]
     public int id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        adults = AdultsData.GetAllAdults();
+        adults = await AdultsData.GetAllAdults();
         adultsToShow = adults;
     }
 
