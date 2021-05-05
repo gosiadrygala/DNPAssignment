@@ -1,6 +1,7 @@
 [
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Front End Web Developer",
       "Salary": 66408
     },
@@ -16,6 +17,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Business Development Manager",
       "Salary": 71456
     },
@@ -31,6 +33,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Skin Care Specialist",
       "Salary": 20545
     },
@@ -46,6 +49,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Vice Principal",
       "Salary": 72901
     },
@@ -61,6 +65,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Teacher",
       "Salary": 91588
     },
@@ -76,6 +81,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Service Advisor",
       "Salary": 72532
     },
@@ -91,6 +97,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Janitor",
       "Salary": 61437
     },
@@ -106,6 +113,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "Office Clerk",
       "Salary": 41332
     },
@@ -121,6 +129,7 @@
   },
   {
     "JobTitle": {
+      "Id": 0,
       "JobTitle": "SW",
       "Salary": 545345
     },
@@ -132,6 +141,22 @@
     "Age": 32,
     "Weight": 23,
     "Height": 232,
+    "Sex": "F"
+  },
+  {
+    "JobTitle": {
+      "Id": 0,
+      "JobTitle": "Suh",
+      "Salary": 456256
+    },
+    "Id": 10,
+    "FirstName": "Gosiek",
+    "LastName": "Lol",
+    "HairColor": "Brown",
+    "EyeColor": "Brown",
+    "Age": 43,
+    "Weight": 43,
+    "Height": 324,
     "Sex": "F"
   }
 ]

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FileData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Models;
+using WebAPI.DataAccess;
+using WebAPI.Repositories;
 
 namespace WebAPI
 {
@@ -19,7 +23,11 @@ namespace WebAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            //DatabaseSetUpData.LoadUserData();
+            //DatabaseSetUpData.LoadAdultData();
+            //DatabaseSetUpData.LoadChildrenData();
         }
+        
 
         public IConfiguration Configuration { get; }
 
@@ -28,6 +36,7 @@ namespace WebAPI
         {
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebAPI", Version = "v1"}); });
+            services.AddScoped<IUserRepo, UserRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

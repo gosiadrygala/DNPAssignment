@@ -6,6 +6,7 @@ using FileData;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Models;
+using WebAPI.Repositories.Adult;
 
 namespace WebAPI.Controllers
 {
@@ -13,24 +14,15 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class AdultController : ControllerBase
     {
-        private IList<Adult> adults = new List<Adult>();
-        private FileContext fileContext = new FileContext();
-
-
-        public AdultController() {
-            adults = fileContext.Adults;
-        }
-
-
+       
+        private IAdultRepo adultRepo = new AdultRepo();
+        
         [HttpGet]
         public async Task<ActionResult<IList<Adult>>> GetAllAdults()
         {
-            try {
-                List<Adult> adultsCopy = new List<Adult>(adults);
-                foreach (var VARIABLE in adults)
-                {
-                    Console.WriteLine(VARIABLE);
-                }
+            try
+            {
+                IList<Adult> adultsCopy = await adultRepo.GetAllAdults();
                 return Ok(adultsCopy);
             }
             catch (Exception e)
@@ -46,10 +38,7 @@ namespace WebAPI.Controllers
         {
             try
             {
-                int max = adults.Max(adult => adult.Id);
-                adult.Id = (++max);
-                adults.Add(adult);
-                fileContext.SaveChanges();
+                await adultRepo.AddAnAdult(adult);
                 return Created($"/{adult.Id}", adult);
             }
             catch (Exception e)
@@ -66,10 +55,8 @@ namespace WebAPI.Controllers
         {
             try
             {
-                Adult adult = adults.First(adult => adult.Id == id);
-                adults.Remove(adult);
-                fileContext.SaveChanges();
-                return Ok(adult.Id);
+                await adultRepo.RemoveAnAdult(id);
+                return Ok(id);
             }
             catch (Exception e)
             {

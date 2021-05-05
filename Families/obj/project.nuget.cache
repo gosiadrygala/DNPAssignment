@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PGz5b/Fxy1aaWL14k2lcH9A7Hsvc8eKDDXRDSy0ntSp/EwpZ6ES11Z6afbfV2pDKNS5OeEJFoum4WWJ2LQGENQ==",
+  "dgSpecHash": "dztK1VjPz/nfB5NRPRdTqBlKWpwrTFKhlUpkx2nLcTXNCKgmyZK80VxSahpZDJOxlqHoqwcjl0tmQnKL2f2GSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj",
+  "projectFilePath": "C:\\Users\\Gosia\\RiderProjects\\DNPAssignment3\\Families\\Families.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gosia\\.nuget\\packages\\blazored.modal\\6.0.1\\blazored.modal.6.0.1.nupkg.sha512",
     "C:\\Users\\Gosia\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.0\\microsoft.aspnetcore.authorization.5.0.0.nupkg.sha512",

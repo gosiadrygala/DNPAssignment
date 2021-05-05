@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Models;
 
 namespace FileData
@@ -11,7 +13,7 @@ namespace FileData
         public IList<Family> Families { get; private set; }
         public IList<Adult> Adults { get; private set; }
 
-        private readonly string familiesFile = "families.json";
+        private readonly string familiesFile = "C:\\Users\\Gosia\\RiderProjects\\DNPAssignment3\\WebAPI\\families.json";
         private readonly string adultsFile = "adults.json";
 
         public FileContext() {
@@ -48,6 +50,31 @@ namespace FileData
             {
                 outputFile.Write(jsonAdults);
             }
+        }
+        
+        public IList<Interest> getAllInterests()
+        {
+            List<Child> children = new List<Child>();
+            foreach (var item in Families)
+            {
+                children.AddRange(item.Children);
+            }
+
+            IList<Interest> interests = new List<Interest>();
+            foreach (var child in children)
+            {
+                for (int i = 0; i < child.Interests.Count; i++)
+                {
+                    interests.Add(
+                        new Interest
+                        {
+                            Type = child.Interests[i].Type,
+                            Description = child.Interests[i].Description
+                        });
+                }
+            }
+
+            return interests;
         }
     }
 }

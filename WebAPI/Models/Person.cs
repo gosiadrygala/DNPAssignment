@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models {
 public class Person {
-    
     public int Id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -12,6 +12,11 @@ public class Person {
     public float Weight { get; set; }
     public int Height { get; set; }
     public string Sex { get; set; }
+    
+    public override string ToString()
+    {
+        return FirstName;
+    }
 }
 
 

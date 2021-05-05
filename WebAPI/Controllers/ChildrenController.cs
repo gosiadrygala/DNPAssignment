@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using FileData;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using WebAPI.Repositories.Children;
 
 namespace WebAPI.Controllers
 {
@@ -11,28 +12,14 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class ChildrenController : ControllerBase
     {
-        
-        private IList<Family> families = new List<Family>();
-        private IList<Child> children = new List<Child>();
-        private FileContext fileContext = new FileContext();
-
-        public ChildrenController()
-        {
-            families = fileContext.Families;
-        }
-        
+        private IChildrenRepo childrenRepo = new ChildrenRepo();
         [HttpGet]
         public async Task<ActionResult<IList<Child>>> GetAllChildren()
         {
-            try {
-                foreach (var item in families)
-                {
-                    for (int i = 0; i < item.Children.Count; i++)
-                    {
-                        children.Add(item.Children[i]);
-                    }
-               
-                }
+            try
+            {
+                IList<Child> children = new List<Child>();
+                children = await childrenRepo.GetAllChildren();
                 return Ok(children);
             }
             catch (Exception e)

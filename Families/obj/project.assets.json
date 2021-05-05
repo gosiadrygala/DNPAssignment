@@ -1022,11 +1022,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj",
+      "projectUniqueName": "C:\\Users\\Gosia\\RiderProjects\\DNPAssignment3\\Families\\Families.csproj",
       "projectName": "Families",
-      "projectPath": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\Families.csproj",
+      "projectPath": "C:\\Users\\Gosia\\RiderProjects\\DNPAssignment3\\Families\\Families.csproj",
       "packagesPath": "C:\\Users\\Gosia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gosia\\RiderProjects\\AssignmentFamilies\\Families\\obj\\",
+      "outputPath": "C:\\Users\\Gosia\\RiderProjects\\DNPAssignment3\\Families\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gosia\\AppData\\Roaming\\NuGet\\NuGet.Config"

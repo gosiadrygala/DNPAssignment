@@ -1,7 +1,10 @@
-namespace Models {
-public class Adult : Person {
-  
+using System.ComponentModel.DataAnnotations.Schema;
 
-    public Job JobTitle { get; set; }
-}
+namespace Models
+{
+    [Table("Adults")]
+    public class Adult : Person
+    {
+        public Job JobTitle { get; set; }
+    }
 }
