@@ -12,9 +12,5 @@ public class Interest {
     public int Id { get; set; }
     [JsonIgnore]
     public IList<Child>? Children { get; set; }
-    public override string ToString()
-    {
-        return Type + Description;
-    }
 }
 }
